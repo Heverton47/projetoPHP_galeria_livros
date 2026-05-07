@@ -1,4 +1,11 @@
-<?php require_once "dados.php"; ?>
+<?php
+session_start();
+require_once "dados.php";
+
+if (isset($_SESSION['livros_adicionados'])) {
+    $livros = array_merge($livros, $_SESSION['livros_adicionados']);
+}
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -17,7 +24,7 @@
 <div class="container">
     <div class="row">
 
-        <?php include_once "funcoes.php"; ?>
+        <?php include "funcoes.php"; ?>
 
     </div>
 </div>
