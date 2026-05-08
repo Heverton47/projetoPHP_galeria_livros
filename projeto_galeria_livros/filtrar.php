@@ -47,7 +47,10 @@ if ($categoria_filtrada !== "") {
 <div class="container">
     <div class="row">
         <?php if (count($livros) > 0): ?>
-            <?php include "funcoes.php"; ?>
+            <?php 
+                require_once "funcoes.php"; 
+                mostrarLivros($livros);
+            ?>
         <?php else: ?>
             <p>Nenhum livro encontrado.</p>
         <?php endif; ?>
