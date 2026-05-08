@@ -24,7 +24,10 @@ if (isset($_SESSION['livros_adicionados'])) {
 <div class="container">
     <div class="row">
 
-        <?php include "funcoes.php"; ?>
+        <?php 
+            require_once "funcoes.php";
+            mostrarLivros($livros);
+         ?>
 
     </div>
 </div>
